@@ -1,4 +1,4 @@
-# AngularCourse
+<!-- # AngularCourse
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
 
@@ -24,4 +24,23 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page. -->
+Д/з 
+
+Створити компонент movie-card(child) та movie-list(parent)
+
+movie-card може містити такі елементи:
+
+Постер фільму: Мініатюрне зображення або постер фільму
+Назва фільму: Текстове поле з назвою фільму, можливо, з додатковою інформацією, такою як рік випуску.
+Рейтинг фільму: Значення рейтингу фільму, яке може бути представлене у вигляді числа.
+Короткий опис або жанр: Короткий опис сюжету фільму або його жанр, який допоможе користувачам швидко зрозуміти суть фільму.
+Додаткова інформація: Можливість відобразити додаткову інформацію, таку як режисер, тривалість, вікові обмеження тощо.
+Кнопка "Детальніше": Кнопка або посилання, яке згодом дозволяє користувачам перейти до детальної сторінки цього фільму для отримання більш докладної інформації або перегляду трейлера.
+Іконки «favourite”, “watchList”
+
+Реалізувати взаємодію parent-child використовуючи @Input та @Output
+
+При натисканні на Іконку «favourite» відобразити карту фільму в новому блоці з назвою «Улюблені»
+
+При натисканні на іконку «watchList» відобразити карту фільмів в новому блоці з назвою «Подивитись» 

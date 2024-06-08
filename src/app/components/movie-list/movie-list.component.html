@@ -1,0 +1,19 @@
+<main class="main">
+    <section class="movie-list">
+        <app-movie-card (idToParent)="addFilm($event)" class="movie-card"
+            *ngFor="let item of filmsList"
+            [Film]="item"></app-movie-card>
+    </section>
+    <section class="movie-favourite">
+        <h2 class="movie-favourite__title">Favorite films</h2>
+        <div class="movie-favourite__wrap-films">
+            <div #favoriteFilm></div>
+        </div>
+    </section>
+    <section class="movie-watch-list">
+        <h2 class="movie-watch-list__title">Watch soon</h2>
+        <div class="movie-watch-list__wrap-films">
+            <div #watchListFilm></div>
+        </div>
+    </section>
+</main>

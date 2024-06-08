@@ -1,0 +1,27 @@
+<div class="movie-card__image">
+    <img [src]="Film.backdrop_path" [alt]="Film.title">
+</div>
+<h2 class="movie-card__name">{{Film.title}}</h2>
+<h4 class="movie-card__description">{{Film.overview}}</h4>
+<div class="movie-card__rating-wrap">
+    <div class="movie-card__rating-image">
+        <img [src]="Film.rating_path" alt="rating">
+    </div>
+    <h6 class="movie-card__rating">{{Film.vote_average}}</h6>
+</div>
+<div class="movie-card__buttons-wrapper buttons">
+    <div class="buttons__button-wrap">
+        <div class="button__image">
+            <img [src]="Film.favorite_path" alt="Favorite star">
+        </div>
+        <button (click)="addFavorite(Film.id)"
+            class="buttons__button">Favorite</button>
+    </div>
+    <div class="buttons__button-wrap">
+        <div class="button__image">
+            <img [src]="Film.watch_path" alt="Watch list like">
+        </div>
+        <button (click)="addWatchList(Film.id)" class="buttons__button">Watch
+            List</button>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+.movie-card {
+    border-radius: 10px;
+    background: rgb(214, 214, 214);
+    box-shadow: 3px 3px 3px gray;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.movie-list {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, auto));
+}
+.movie-favourite,
+.movie-watch-list {
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    &__title {
+        font-size: 25px;
+        font-weight: 600;
+        padding: 10px;
+    }
+}
+.movie-watch-list {
+    &__title {
+    }
+}
+.main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
