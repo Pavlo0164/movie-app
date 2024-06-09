@@ -2,6 +2,31 @@ import { Component } from "@angular/core"
 import { CommonModule } from "@angular/common"
 import { MovieCardComponent } from "../movie-card/movie-card.component"
 import { MovieMiniCardComponent } from "../movie-mini-card/movie-mini-card.component"
+
+export interface Film {
+	adult: boolean
+	backdrop_path: string
+	rating_path: string
+	favorite_path: string
+	watch_path: string
+	genre_ids: number[]
+	id: number
+	original_language: string
+	original_title: string
+	overview: string
+	popularity: number
+	poster_path: string
+	release_date: string
+	title: string
+	video: boolean
+	vote_average: number
+	vote_count: number
+}
+export interface InfoFromChild {
+	id: number
+	flag: string
+	typeEvent: string
+}
 @Component({
 	selector: "app-movie-list",
 	standalone: true,
@@ -10,7 +35,7 @@ import { MovieMiniCardComponent } from "../movie-mini-card/movie-mini-card.compo
 	styleUrl: "./movie-list.component.scss",
 })
 export class MovieListComponent {
-	public filmsList: any = [
+	public filmsList: Film[] = [
 		{
 			adult: false,
 			backdrop_path: "/assets/films/kingdom-of-the-planet.jpeg",
@@ -94,7 +119,7 @@ export class MovieListComponent {
 	]
 	public filmInWatch: number[] = []
 	public filmInFavorite: number[] = []
-	addFilm(idAndFlag: { id: number; flag: string; typeEvent: string }) {
+	addFilm(idAndFlag: InfoFromChild) {
 		const id: number = idAndFlag.id
 		if (idAndFlag.flag === "watch") {
 			if (idAndFlag.typeEvent === "add") this.filmInWatch.push(idAndFlag.id)
