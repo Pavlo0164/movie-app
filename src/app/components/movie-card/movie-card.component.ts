@@ -10,17 +10,38 @@ import { Component, EventEmitter, Input, Output } from "@angular/core"
 export class MovieCardComponent {
 	@Input() Film: any
 	@Output() idToParent = new EventEmitter<any>()
+	public checkedFavorite: number = 0
+	public checkedWatch: number = 0
+	
 	constructor() {}
-	addFavorite(id: Number) {
+	addFavorite(id: number) {
+		let typeEvent: string = ""
+		if (this.checkedFavorite) {
+			typeEvent = "delete"
+			this.checkedFavorite = 0
+		} else {
+			this.checkedFavorite = id
+			typeEvent = "add"
+		}
 		this.idToParent.emit({
 			id: id,
 			flag: "favorite",
+			typeEvent: typeEvent,
 		})
 	}
-	addWatchList(id: Number) {
+	addWatchList(id: number) {
+		let typeEvent: string = ""
+		if (this.checkedWatch) {
+			this.checkedWatch = 0
+			typeEvent = "delete"
+		} else {
+			this.checkedWatch = id
+			typeEvent = "add"
+		}
 		this.idToParent.emit({
 			id: id,
 			flag: "watch",
+			typeEvent: typeEvent,
 		})
 	}
 }

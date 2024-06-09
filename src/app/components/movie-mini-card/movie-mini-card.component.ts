@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core"
+import { Component, DoCheck, Input } from "@angular/core"
 
 @Component({
 	selector: "app-movie-mini-card",
@@ -7,6 +7,11 @@ import { Component, Input } from "@angular/core"
 	templateUrl: "./movie-mini-card.component.html",
 	styleUrl: "./movie-mini-card.component.scss",
 })
-export class MovieMiniCardComponent {
-	@Input() Film: any = ""
+export class MovieMiniCardComponent implements DoCheck {
+	@Input() id: number = 0
+	@Input() films: any[] = []
+	public film: any = ""
+	ngDoCheck(): void {
+		this.film = this.films.find((item) => item.id === this.id)
+	}
 }

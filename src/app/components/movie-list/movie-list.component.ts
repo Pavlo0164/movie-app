@@ -1,16 +1,15 @@
 import { Component } from "@angular/core"
-import { MovieCardComponent } from "../movie-card/movie-card.component"
 import { CommonModule } from "@angular/common"
+import { MovieCardComponent } from "../movie-card/movie-card.component"
 import { MovieMiniCardComponent } from "../movie-mini-card/movie-mini-card.component"
 @Component({
 	selector: "app-movie-list",
 	standalone: true,
-	imports: [MovieCardComponent, CommonModule,MovieMiniCardComponent],
+	imports: [MovieCardComponent, CommonModule, MovieMiniCardComponent],
 	templateUrl: "./movie-list.component.html",
 	styleUrl: "./movie-list.component.scss",
 })
 export class MovieListComponent {
-	private idFromChild: Number = 0
 	public filmsList: any = [
 		{
 			adult: false,
@@ -93,9 +92,20 @@ export class MovieListComponent {
 			vote_count: 341,
 		},
 	]
-	constructor() {}
-	addFilm(id: any) {
-		this.idFromChild = id
-		console.log(this.idFromChild)
+	public filmInWatch: number[] = []
+	public filmInFavorite: number[] = []
+	addFilm(idAndFlag: { id: number; flag: string; typeEvent: string }) {
+		const id: number = idAndFlag.id
+		if (idAndFlag.flag === "watch") {
+			if (idAndFlag.typeEvent === "add") this.filmInWatch.push(idAndFlag.id)
+			else this.filmInWatch = this.filmInWatch.filter((item) => item !== id)
+		} else if (idAndFlag.flag === "favorite") {
+			if (idAndFlag.typeEvent === "add")
+				this.filmInFavorite.push(idAndFlag.id)
+			else
+				this.filmInFavorite = this.filmInFavorite.filter(
+					(item) => item !== id
+				)
+		}
 	}
 }
