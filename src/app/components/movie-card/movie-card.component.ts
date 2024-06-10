@@ -14,8 +14,8 @@ export class MovieCardComponent {
 	@Output() idToParent = new EventEmitter<InfoFromChild>()
 	public checkedFavorite: number = 0
 	public checkedWatch: number = 0
-
-	constructor() {}
+	public butttonWatch = "Watch list"
+	public buttonFavorite = "Favorite"
 	addFavorite(id: number) {
 		let typeEvent: string = ""
 		if (this.checkedFavorite) {

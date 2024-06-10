@@ -19,7 +19,7 @@
         </div>
 
         <button (click)="addFavorite(Film.id)"
-            class="buttons__button ">Favorite</button>
+            class="buttons__button ">{{buttonFavorite}}</button>
 
     </div>
     }@else{
@@ -29,7 +29,7 @@
         </div>
 
         <button (click)="addFavorite(Film.id)"
-            class="buttons__button ">Favorite</button>
+            class="buttons__button ">{{buttonFavorite}}</button>
 
     </div>
     }
@@ -41,8 +41,7 @@
         </div>
 
         <button (click)="addWatchList(Film.id)"
-            class="buttons__button ">Watch
-            List</button>
+            class="buttons__button ">{{butttonWatch}}</button>
     </div>
     }
     @else {
@@ -52,8 +51,7 @@
         </div>
 
         <button (click)="addWatchList(Film.id)"
-            class="buttons__button ">Watch
-            List</button>
+            class="buttons__button ">{{butttonWatch}}</button>
     </div>
     }
 

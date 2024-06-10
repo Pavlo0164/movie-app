@@ -1,4 +1,4 @@
-import { Component } from "@angular/core"
+import { Component, OnChanges, SimpleChanges } from "@angular/core"
 import { CommonModule } from "@angular/common"
 import { MovieCardComponent } from "../movie-card/movie-card.component"
 import { MovieMiniCardComponent } from "../movie-mini-card/movie-mini-card.component"
@@ -34,7 +34,9 @@ export interface InfoFromChild {
 	templateUrl: "./movie-list.component.html",
 	styleUrl: "./movie-list.component.scss",
 })
-export class MovieListComponent {
+export class MovieListComponent implements OnChanges {
+	public titleFavorite = "Favorite films"
+	public titleWatch = "Watch soon"
 	public filmsList: Film[] = [
 		{
 			adult: false,
@@ -119,6 +121,11 @@ export class MovieListComponent {
 	]
 	public filmInWatch: number[] = []
 	public filmInFavorite: number[] = []
+
+	constructor() {}
+	ngOnChanges(changes: SimpleChanges): void {
+		console.log(changes)
+	}
 	addFilm(idAndFlag: InfoFromChild) {
 		const id: number = idAndFlag.id
 		if (idAndFlag.flag === "watch") {

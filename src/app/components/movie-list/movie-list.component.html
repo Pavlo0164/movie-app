@@ -5,7 +5,7 @@
             [Film]="item"></app-movie-card>
     </section>
     <section class="movie-favourite">
-        <h2 class="movie-favourite__title">Favorite films</h2>
+        <h2 class="movie-favourite__title">{{titleFavorite}}</h2>
         <div class="movie-favourite__wrap-films">
             @if(filmInFavorite.length !== 0){
             <app-movie-mini-card class="movie-favourite__mini-card"
@@ -15,7 +15,7 @@
         </div>
     </section>
     <section class="movie-watch-list">
-        <h2 class="movie-watch-list__title">Watch soon</h2>
+        <h2 class="movie-watch-list__title">{{titleWatch}}</h2>
         <div class="movie-watch-list__wrap-films">
 
             @if(filmInWatch.length !== 0){
