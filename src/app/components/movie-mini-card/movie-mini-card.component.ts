@@ -1,5 +1,5 @@
 import { Component, DoCheck, Input } from "@angular/core"
-import { Film } from "../movie-list/movie-list.component"
+import Film from "../../models/film.model"
 @Component({
 	selector: "app-movie-mini-card",
 	standalone: true,

@@ -2,31 +2,9 @@ import { Component, OnChanges, SimpleChanges } from "@angular/core"
 import { CommonModule } from "@angular/common"
 import { MovieCardComponent } from "../movie-card/movie-card.component"
 import { MovieMiniCardComponent } from "../movie-mini-card/movie-mini-card.component"
+import Film from "../../models/film.model"
+import InfoFromChild from "../../models/infoFromChild.model"
 
-export interface Film {
-	adult: boolean
-	backdrop_path: string
-	rating_path: string
-	favorite_path: string
-	watch_path: string
-	genre_ids: number[]
-	id: number
-	original_language: string
-	original_title: string
-	overview: string
-	popularity: number
-	poster_path: string
-	release_date: string
-	title: string
-	video: boolean
-	vote_average: number
-	vote_count: number
-}
-export interface InfoFromChild {
-	id: number
-	flag: string
-	typeEvent: string
-}
 @Component({
 	selector: "app-movie-list",
 	standalone: true,
@@ -35,8 +13,6 @@ export interface InfoFromChild {
 	styleUrl: "./movie-list.component.scss",
 })
 export class MovieListComponent implements OnChanges {
-	public titleFavorite = "Favorite films"
-	public titleWatch = "Watch soon"
 	public filmsList: Film[] = [
 		{
 			adult: false,
@@ -121,7 +97,6 @@ export class MovieListComponent implements OnChanges {
 	]
 	public filmInWatch: number[] = []
 	public filmInFavorite: number[] = []
-
 	constructor() {}
 	ngOnChanges(changes: SimpleChanges): void {
 		console.log(changes)
@@ -136,7 +111,7 @@ export class MovieListComponent implements OnChanges {
 				this.filmInFavorite.push(idAndFlag.id)
 			else
 				this.filmInFavorite = this.filmInFavorite.filter(
-					(item) => item !== id
+					(item) => item !== id,
 				)
 		}
 	}

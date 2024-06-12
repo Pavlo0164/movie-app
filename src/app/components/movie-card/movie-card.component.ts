@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, Output } from "@angular/core"
-import { Film } from "../movie-list/movie-list.component"
-
-import { InfoFromChild } from "../movie-list/movie-list.component"
+import Film from "../../models/film.model"
+import InfoFromChild from "../../models/infoFromChild.model"
 @Component({
 	selector: "app-movie-card",
 	standalone: true,
@@ -10,12 +9,10 @@ import { InfoFromChild } from "../movie-list/movie-list.component"
 	styleUrl: "./movie-card.component.scss",
 })
 export class MovieCardComponent {
-	@Input() Film: Film | undefined
+	@Input() film: Film | undefined
 	@Output() idToParent = new EventEmitter<InfoFromChild>()
 	public checkedFavorite: number = 0
 	public checkedWatch: number = 0
-	public butttonWatch = "Watch list"
-	public buttonFavorite = "Favorite"
 	addFavorite(id: number) {
 		let typeEvent: string = ""
 		if (this.checkedFavorite) {
