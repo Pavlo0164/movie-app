@@ -73,6 +73,7 @@
     justify-content: space-between;
     gap: 5px;
     &__button-wrap {
+        cursor: pointer;
         display: flex;
         align-items: center;
         gap: 5px;

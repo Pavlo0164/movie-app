@@ -1,59 +1,36 @@
 @if(film){
 <div class="movie-card__image">
-    <img [src]="film.backdrop_path" [alt]="film.title">
+    <img [src]="film.backdrop_path" [alt]="film.title" />
 </div>
-<h2 class="movie-card__name">{{film.title}}</h2>
-<h4 class="movie-card__description">{{film.overview}}</h4>
-<div class="movie-card__rating-wrap">
-    <div class="movie-card__rating-image">
-        <img [src]="film.rating_path" alt="rating">
-    </div>
-    <h6 class="movie-card__rating">{{film.vote_average}}</h6>
-</div>
-<div class="movie-card__buttons-wrapper buttons">
-
-    @if(checkedFavorite){
-    <div class="buttons__button-wrap --active">
-        <div class="button__image">
-            <img [src]="film.favorite_path" alt="Favorite star">
+<h2 class="movie-card__name">{{ film.title }}</h2>
+<ng-container *ngIf="isShowDescription">
+    <h4 class="movie-card__description">{{ film.overview }}</h4>
+    <div class="movie-card__rating-wrap">
+        <div class="movie-card__rating-image">
+            <img [src]="film.rating_path" alt="rating" />
         </div>
-
-        <button (click)="addFavorite(film.id)"
-            class="buttons__button ">Favorite</button>
-
+        <h6 class="movie-card__rating">{{film.vote_average|changeRating}}</h6>
     </div>
-    }@else{
-    <div class="buttons__button-wrap">
-        <div class="button__image">
-            <img [src]="film.favorite_path" alt="Favorite star">
+    <div class="movie-card__buttons-wrapper buttons">
+        <div
+            (click)="addFavoriteOrWatch(film.id, 'favorite')"
+            class="buttons__button-wrap"
+            [ngClass]="isAddedToFavorite ? ' --active' : ''">
+            <div class="button__image">
+                <img [src]="film.favorite_path" alt="Favorite star" />
+            </div>
+            <button class="buttons__button">Favorite</button>
         </div>
-
-        <button (click)="addFavorite(film.id)"
-            class="buttons__button ">Favorite</button>
-
-    </div>
-    }
-
-    @if(checkedWatch){
-    <div class="buttons__button-wrap --active">
-        <div class="button__image">
-            <img [src]="film.watch_path" alt="Watch list like">
+        <div
+            (click)="addFavoriteOrWatch(film.id, 'watch')"
+            class="buttons__button-wrap"
+            [ngClass]="isAddedToWatch ? ' --active' : ''">
+            <div class="button__image">
+                <img [src]="film.watch_path" alt="Watch list like" />
+            </div>
+            <button class="buttons__button">Watch list</button>
         </div>
-
-        <button (click)="addWatchList(film.id)"
-            class="buttons__button ">Watch list</button>
     </div>
-    }
-    @else {
-    <div class="buttons__button-wrap ">
-        <div class="button__image">
-            <img [src]="film.watch_path" alt="Watch list like">
-        </div>
+</ng-container>
 
-        <button (click)="addWatchList(film.id)"
-            class="buttons__button ">Watch list</button>
-    </div>
-    }
-
-</div>
 }
