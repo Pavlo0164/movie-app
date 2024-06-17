@@ -37,7 +37,9 @@ export const filmsList: Film[] = [
 		release_date: "2024-04-10",
 		title: "Civil War",
 		video: false,
-		vote_average: 7.1,
+
+		vote_average: 7.13,
+
 		vote_count: 1296,
 	},
 	{
@@ -77,7 +79,9 @@ export const filmsList: Film[] = [
 		release_date: "2024-05-01",
 		title: "Tarot",
 		video: false,
-		vote_average: 6.5,
+
+		vote_average: 6.53,
+
 		vote_count: 341,
 	},
 ]

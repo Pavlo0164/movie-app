@@ -1,28 +1,36 @@
-<main class="main">
-    <section class="movie-list">
-        <app-movie-card (idToParent)="addFilm($event)" class="movie-card"
-            *ngFor="let item of filmsList"
-            [film]="item"></app-movie-card>
-    </section>
-    <section class="movie-favourite">
-        <h2 class="movie-favourite__title">Favorite films</h2>
-        <div class="movie-favourite__wrap-films">
-            @if(filmInFavorite.length !== 0){
-            <app-movie-mini-card class="movie-favourite__mini-card"
-                [films]="filmsList" [id]="item"
-                *ngFor="let item of filmInFavorite"></app-movie-mini-card>
-            }
-        </div>
-    </section>
-    <section class="movie-watch-list">
-        <h2 class="movie-watch-list__title">Watch soon</h2>
-        <div class="movie-watch-list__wrap-films">
-
-            @if(filmInWatch.length !== 0){
-            <app-movie-mini-card class="movie-favourite__mini-card"
-                [films]="filmsList" [id]="item"
-                *ngFor="let item of filmInWatch"></app-movie-mini-card>
-            }
-        </div>
-    </section>
-</main>
+<section class="movie-list">
+    <app-movie-card
+        *ngFor="let item of filmsList"
+        (idToParent)="addFilm($event)" class="movie-card"
+        [film]="item"
+        [isAddedToWatch]="filmInWatch.has(item.id)"
+        [isAddedToFavorite]="filmInFavorite.has(item.id)"
+        [isShowDescription]="true">
+    </app-movie-card>
+</section>
+<section class="movie-favourite">
+    <h2 class="movie-favourite__title">Favorite films</h2>
+    <div class="movie-favourite__wrap-films">
+        @if(filmInFavorite.size!== 0){
+        <app-movie-card
+            class="movie-favourite__mini-card"
+            [film]="filmsMap.get(item)"
+            *ngFor="let item of filmInFavorite"
+            [isShowDescription]="false">
+        </app-movie-card>
+        }
+    </div>
+</section>
+<section class="movie-watch-list">
+    <h2 class="movie-watch-list__title">Watch soon</h2>
+    <div class="movie-watch-list__wrap-films">
+        @if(filmInWatch.size !== 0){
+        <app-movie-card
+            class="movie-favourite__mini-card"
+            [film]="filmsMap.get(item)"
+            *ngFor="let item of filmInWatch"
+            [isShowDescription]="false">
+        </app-movie-card>
+        }
+    </div>
+</section>

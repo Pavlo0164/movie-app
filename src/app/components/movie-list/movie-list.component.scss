@@ -1,3 +1,7 @@
+//я додав класи селектору компонента безпосередньо коли вставляв компонент, в мому випадку,  в movie-list
+//щоб не було багато зайвих обгорток
+//то виходить що класи вже не в  movie-card компоненті а в movie-list
+//надіюсь норм пояснив :)
 .movie-card,
 .movie-favourite__mini-card {
     border-radius: 10px;
@@ -19,6 +23,10 @@
     padding: 10px;
     border: 1px solid gray;
     border-radius: 10px;
+    @media (max-width: 950px) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
     &__wrap-films {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(200px, auto));
@@ -29,16 +37,4 @@
         font-weight: 600;
         padding: 10px;
     }
-}
-.movie-favourite,
-.movie-watch-list {
-    @media (max-width: 950px) {
-        grid-column-start: 1;
-        grid-column-end: 3;
-    }
-}
-.main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
 }
