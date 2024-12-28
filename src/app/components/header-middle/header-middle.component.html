@@ -1,0 +1,36 @@
+<section class="header__main">
+  <div class="header__container">
+    <a href="#" class="header__logo">
+      <mat-icon class="header__icon-logo">local_mall</mat-icon>
+      {{ logoText }}
+    </a>
+    <form action="#" name="searchProduct" class="header__search">
+      <input class="header__input" matInput placeholder="Search product" />
+    </form>
+    <div
+      (mouseleave)="isShowed = false"
+      class="header__phone-group phone-group"
+    >
+      <div (mouseenter)="isShowed = true" class="phone-group__row">
+        <mat-icon class="phone-group__icon">call</mat-icon>
+        <span class="phone-group__phone">{{ phone }}</span>
+      </div>
+      <a
+        class="phone-group__link"
+        *ngIf="isShowed"
+        [href]="phone"
+       
+        >Call to you?</a
+      >
+    </div>
+    <div class="header__shop shop-header">
+      <mat-icon class="shop-header__icon-shop" [matBadge]="amountOfItems"
+        >shopping_cart</mat-icon
+      >
+      <div class="shop-header__text">
+        <h4 class="shop-header__title">{{ titleOfShop }}</h4>
+        <span class="shop-header__amount-money">{{ amountMoney }}UAH</span>
+      </div>
+    </div>
+  </div>
+</section>

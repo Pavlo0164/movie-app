@@ -1,0 +1,23 @@
+.header {
+  &__top {
+    background-color: #5d5a56;
+  }
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 5rem;
+    gap: 0.7rem;
+  }
+  &__button-favorite {
+  }
+
+  &__icon-favorite {
+  }
+
+  &__button-user {
+  }
+
+  &__icon-user {
+  }
+}
