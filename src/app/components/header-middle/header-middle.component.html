@@ -16,9 +16,9 @@
         <mat-icon class="phone-group__icon">call</mat-icon>
         <span class="phone-group__phone">{{ phone }}</span>
       </div>
-      <a class="phone-group__link" *ngIf="isShowed" [href]="phone"
-        >Call to you?</a
-      >
+      <button (click)="onShowPopUp()" [class]="!isShowed ? 'hidden' : null" class="phone-group__link">
+        Call to you?
+      </button>
     </div>
     <button class="header__shop shop-header">
       <mat-icon class="shop-header__icon-shop" [matBadge]="amountOfItems"

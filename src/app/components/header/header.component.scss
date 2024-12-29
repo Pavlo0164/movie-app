@@ -1,23 +1,70 @@
 .header {
   &__top {
-    background-color: #5d5a56;
+    background-color: #3d3b39;
   }
   &__container {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    min-height: 5rem;
+    min-height: 4rem;
     gap: 0.7rem;
   }
-  &__button-favorite {
+  &__favorite-wrapper {
+    position: relative;
+    transition: all 0.2s ease;
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    &.active {
+      & .header__icon-favorite {
+        color: #fff;
+      }
+      &:hover {
+        background-color: #7d7975;
+      }
+    }
   }
-
   &__icon-favorite {
+    color: #8f8b8b;
+  }
+  &__badge-icon-favorite {
+    background-color: #c67a2f;
+    position: absolute;
+    font-weight: 600;
+    color: #fff;
+    font-size: 0.6rem;
+    top: 0;
+    right: 0;
+    padding: 0.2rem;
+    line-height: 50%;
+    border-radius: 50%;
+    display: inline;
+    &.hidden {
+      display: none;
+    }
   }
 
   &__button-user {
+    display: flex;
+    align-items: center;
+    padding: 0.4rem;
+    gap: 0.2rem;
+    border-radius: 0.3rem;
+    transition: all 0.2s ease;
+    &:hover {
+      background-color: #7d7975;
+    }
   }
 
   &__icon-user {
+    color: #d6d6d6;
+  }
+  &__user-name {
+    font-weight: 500;
+    color: #d6d6d6;
+    font-size: 1.2rem;
+    margin-bottom: 0;
+    display: inline-block;
   }
 }

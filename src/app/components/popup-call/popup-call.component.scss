@@ -1,0 +1,72 @@
+.pop-up {
+  font-size: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #5150508e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &_name,
+  &_phone {
+    display: flex;
+
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: flex-end;
+    & input {
+      padding: 0.6rem;
+      outline: 1px solid #c4bfbf;
+      border-radius: 0.4rem;
+      flex-basis: 70%;
+      &:focus {
+        outline: 1px solid #000000;
+      }
+    }
+  }
+
+  &_phone {
+  }
+
+  &_exit {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    cursor: pointer;
+  }
+
+  &__content {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    position: relative;
+    padding: 3rem;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 2rem;
+  }
+
+  &__text {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  &__send {
+    transition: all 0.2s ease;
+    padding: 0.4rem 1rem;
+    border-radius: 0.3rem;
+    justify-self: center;
+    font-weight: 600;
+    color: #fff;
+    background-color: #17b4d3;
+    &:hover {
+      background-color: #0b4b58;
+    }
+    &:active {
+      background-color: #17b4d3;
+    }
+  }
+}

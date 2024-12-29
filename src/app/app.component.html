@@ -1,6 +1,7 @@
 <div class="wrapper">
   <div class="header">
-    <app-header> </app-header>
-    <app-header-middle></app-header-middle>
+    <app-header [logged]="isLogged"> </app-header>
+    <app-header-middle [logged]="isLogged"></app-header-middle>
   </div>
+  <app-popup-call *ngIf="isShowCallBack"></app-popup-call>
 </div>

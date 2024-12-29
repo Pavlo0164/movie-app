@@ -1,17 +1,33 @@
 <section class="header__top">
   <div class="header__container">
-    <button
-      class="header__button-favorite"
-      disabled
-      disabledInteractive
-      mat-fab
-      type="button"
-    >
-      <mat-icon class="header__icon-favorite" fontIcon="favorite"></mat-icon>
-    </button>
-    <button class="header__button-user" mat-fab extended>
+    <div [class]="logged ? 'active' : null" class="header__favorite-wrapper">
+      <mat-icon class="header__icon-favorite" fontIcon="favorite"> </mat-icon>
+      <span
+        [class]="!logged ? 'hidden' : null"
+        class="header__badge-icon-favorite"
+        >{{ productsInFavor }}</span
+      >
+    </div>
+
+    <button *ngIf="!logged; else loggedUser" class="header__button-user">
       <mat-icon class="header__icon-user" fontIcon="person"></mat-icon>
-      {{ userButtonText }}
+      <p class="header__user-name">{{ userButtonText }}</p>
     </button>
+    <ng-template #loggedUser>
+      <button [matMenuTriggerFor]="menu" class="header__button-user">
+        <mat-icon class="header__icon-user" fontIcon="person"></mat-icon>
+        <p class="header__user-name">{{ nameOfUser }}</p>
+        <mat-icon
+          class="header__icon-user"
+          fontIcon="keyboard_arrow_down"
+        ></mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Private data</button>
+        <button mat-menu-item>Orders</button>
+        <button mat-menu-item>Chosen</button>
+        <button mat-menu-item>Exit</button>
+      </mat-menu>
+    </ng-template>
   </div>
 </section>
