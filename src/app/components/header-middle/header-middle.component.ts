@@ -2,8 +2,7 @@ import { Component, OnChanges, SimpleChanges } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatBadgeModule } from '@angular/material/badge';
-import { NgIf } from '@angular/common';
-import { Input, Output, EventEmitter } from '@angular/core';
+import { output, input } from '@angular/core';
 
 @Component({
   selector: 'app-header-middle',
@@ -12,22 +11,18 @@ import { Input, Output, EventEmitter } from '@angular/core';
   styleUrl: './header-middle.component.scss',
 })
 export class HeaderMiddleComponent implements OnChanges {
-  @Input() logged!: boolean;
-  @Output() showPopUpEvent = new EventEmitter<boolean>();
-  public logoText: string = 'superShop';
-  public phone: string = '+380931437843';
-  public titleOfShop: string = 'Shop';
+  public logged = input<boolean>(false);
+  public showPopUpEvent = output<boolean>();
 
+  public isShowed: boolean = false;
+  public phone: string = 'tel:+380931437843';
   public amountOfItems?: number;
   public amountMoney?: number;
-  public isShowed: boolean = false;
+
   ngOnChanges(changes: SimpleChanges): void {
-    if (this.logged) {
+    if (this.logged()) {
       this.amountOfItems = 5;
       this.amountMoney = 450;
     }
-  }
-  onShowPopUp() {
-    this.showPopUpEvent.emit(true);
   }
 }

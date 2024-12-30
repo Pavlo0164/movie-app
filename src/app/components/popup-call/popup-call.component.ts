@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output, HostBinding, HostListener } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
 
 @Component({
@@ -8,8 +8,11 @@ import { MatIcon } from '@angular/material/icon';
   styleUrl: './popup-call.component.scss',
 })
 export class PopupCallComponent {
-  public title: string = 'To call you back?';
-  public text: string =
-    'Enter your phone number and name.We will call you soon';
-
+  public closePopUpCallMe = output<boolean>();
+  @HostBinding('class.active')
+  @HostListener('body:click', ['$event'])
+  closePopUp(event: any) {
+    if (event.target.classList.contains('pop-up'))
+      this.closePopUpCallMe.emit(false);
+  }
 }

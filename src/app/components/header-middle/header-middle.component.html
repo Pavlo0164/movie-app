@@ -2,7 +2,7 @@
   <div class="header__container">
     <a href="#" class="header__logo">
       <mat-icon class="header__icon-logo">local_mall</mat-icon>
-      {{ logoText }}
+      superShop
     </a>
     <form action="#" name="searchProduct" class="header__search">
       <input class="header__input" matInput placeholder="Search product" />
@@ -14,9 +14,13 @@
     >
       <div class="phone-group__row">
         <mat-icon class="phone-group__icon">call</mat-icon>
-        <span class="phone-group__phone">{{ phone }}</span>
+        <a [href]="phone"  class="phone-group__phone">{{ phone }}</a>
       </div>
-      <button (click)="onShowPopUp()" [class]="!isShowed ? 'hidden' : null" class="phone-group__link">
+      <button
+        (click)="showPopUpEvent.emit(true)"
+        [class]="!isShowed ? 'hidden' : null"
+        class="phone-group__link"
+      >
         Call to you?
       </button>
     </div>
@@ -25,7 +29,7 @@
         >shopping_cart</mat-icon
       >
       <div class="shop-header__text">
-        <h4 class="shop-header__title">{{ titleOfShop }}</h4>
+        <h4 class="shop-header__title">Shop</h4>
         <span class="shop-header__amount-money">{{ amountMoney }}UAH</span>
       </div>
     </button>

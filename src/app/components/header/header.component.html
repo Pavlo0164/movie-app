@@ -1,6 +1,6 @@
 <section class="header__top">
   <div class="header__container">
-    <div [class]="logged ? 'active' : null" class="header__favorite-wrapper">
+    <div [class]="logged() ? 'active' : null" class="header__favorite-wrapper">
       <mat-icon class="header__icon-favorite" fontIcon="favorite"> </mat-icon>
       <span
         [class]="!logged ? 'hidden' : null"
@@ -8,10 +8,9 @@
         >{{ productsInFavor }}</span
       >
     </div>
-
     <button *ngIf="!logged; else loggedUser" class="header__button-user">
       <mat-icon class="header__icon-user" fontIcon="person"></mat-icon>
-      <p class="header__user-name">{{ userButtonText }}</p>
+      <p class="header__user-name">Log In</p>
     </button>
     <ng-template #loggedUser>
       <button [matMenuTriggerFor]="menu" class="header__button-user">
