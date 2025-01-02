@@ -80,6 +80,7 @@ body {
 }
 body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  display: flex;
 }
 [class*="__container"] {
   max-width: 1400px;

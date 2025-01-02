@@ -1,4 +1,4 @@
-import { Component, output, HostBinding, HostListener } from '@angular/core';
+import { Component, HostListener, output } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
 
 @Component({
@@ -6,13 +6,18 @@ import { MatIcon } from '@angular/material/icon';
   imports: [MatIcon],
   templateUrl: './popup-call.component.html',
   styleUrl: './popup-call.component.scss',
+  host: {
+    class: 'pop-up',
+  },
 })
 export class PopupCallComponent {
-  public closePopUpCallMe = output<boolean>();
-  @HostBinding('class.active')
+  closePopUpCallMe = output<boolean>();
   @HostListener('body:click', ['$event'])
-  closePopUp(event: any) {
-    if (event.target.classList.contains('pop-up'))
+  closePopUp(event: MouseEvent) {
+    if (
+      event.target &&
+      (event.target as HTMLElement).classList.contains('pop-up')
+    )
       this.closePopUpCallMe.emit(false);
   }
 }

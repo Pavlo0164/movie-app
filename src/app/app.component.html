@@ -1,13 +1,12 @@
-<div class="wrapper">
-  <div class="header">
-    <app-header [logged]="isLogged"> </app-header>
-    <app-header-middle
-      (showPopUpEvent)="eventShowPopUp($event)"
-      [logged]="isLogged"
-    ></app-header-middle>
-  </div>
-  <app-popup-call
-    (closePopUpCallMe)="eventShowPopUp($event)"
-    *ngIf="isShowCallBack"
-  ></app-popup-call>
+<div class="header">
+  <app-header [logged]="isLogged"> </app-header>
+  <app-header-middle
+    (showPopUpEvent)="eventShowPopUp($event)"
+    [logged]="isLogged"
+  ></app-header-middle>
 </div>
+<app-menu></app-menu>
+<app-popup-call
+  (closePopUpCallMe)="eventShowPopUp($event)"
+  *ngIf="isShowCallBack"
+></app-popup-call>

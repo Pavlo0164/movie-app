@@ -1,3 +1,6 @@
-.header {
-  
+:host(.wrapper) {
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+  flex-grow: 1;
 }

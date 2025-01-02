@@ -1,20 +1,18 @@
-<section class="pop-up">
-  <form name="callBack" class="pop-up__content">
-    <h2 class="pop-up__title">To call you back?</h2>
-    <p class="pop-up__text">
-      Enter your phone number and name.We will call you soon
-    </p>
-    <label class="pop-up_name">
-      Name
-      <input type="text" name="name" />
-    </label>
-    <label class="pop-up_phone">
-      Phone
-      <input type="tel" name="phone" />
-    </label>
-    <button class="pop-up__send" type="button">Send</button>
-    <span class="pop-up_exit">
-      <mat-icon (click)="closePopUpCallMe.emit(false)">close</mat-icon>
-    </span>
-  </form>
-</section>
+<form name="callBack" class="pop-up__content">
+  <h2 class="pop-up__title">To call you back?</h2>
+  <p class="pop-up__text">
+    Enter your phone number and name.We will call you soon
+  </p>
+  <label class="pop-up_name">
+    Name
+    <input type="text" name="name" />
+  </label>
+  <label class="pop-up_phone">
+    Phone
+    <input type="tel" name="phone" />
+  </label>
+  <button class="pop-up__send" type="button">Send</button>
+  <span class="pop-up_exit">
+    <mat-icon (click)="closePopUpCallMe.emit(false)">close</mat-icon>
+  </span>
+</form>

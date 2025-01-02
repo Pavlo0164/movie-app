@@ -14,7 +14,7 @@
     >
       <div class="phone-group__row">
         <mat-icon class="phone-group__icon">call</mat-icon>
-        <a [href]="phone"  class="phone-group__phone">{{ phone }}</a>
+        <a [href]="phone" class="phone-group__phone">{{ phone }}</a>
       </div>
       <button
         (click)="showPopUpEvent.emit(true)"
@@ -25,12 +25,16 @@
       </button>
     </div>
     <button class="header__shop shop-header">
-      <mat-icon class="shop-header__icon-shop" [matBadge]="amountOfItems"
+      <mat-icon
+        class="shop-header__icon-shop"
+        [matBadge]="infoAboutUser()?.amountOfItems"
         >shopping_cart</mat-icon
       >
       <div class="shop-header__text">
         <h4 class="shop-header__title">Shop</h4>
-        <span class="shop-header__amount-money">{{ amountMoney }}UAH</span>
+        <span class="shop-header__amount-money"
+          >{{ infoAboutUser()?.amountOfMoney }}UAH</span
+        >
       </div>
     </button>
   </div>

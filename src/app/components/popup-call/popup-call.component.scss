@@ -1,4 +1,4 @@
-.pop-up {
+:host(.pop-up) {
   font-size: 1rem;
   position: absolute;
   top: 0;
@@ -9,6 +9,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.pop-up {
   &_name,
   &_phone {
     display: flex;
@@ -55,19 +57,18 @@
     margin-bottom: 2rem;
   }
   &__send {
-    transition: all 0.2s ease;
+    transition: background 0.2s ease;
     padding: 0.4rem 1rem;
     border-radius: 0.3rem;
     justify-self: center;
     font-weight: 600;
     color: #fff;
-    background-color: #17b4d3;
+    background: #17b4d3;
     &:hover {
-      background-color: #0b4b58;
+      background: #0b4b58;
     }
     &:active {
-      background-color: #17b4d3;
+      background: #17b4d3;
     }
   }
 }
-

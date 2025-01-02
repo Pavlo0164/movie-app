@@ -1,28 +1,27 @@
-import { Component, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, computed } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
 import { MatBadgeModule } from '@angular/material/badge';
 import { output, input } from '@angular/core';
 
 @Component({
   selector: 'app-header-middle',
-  imports: [MatIcon, MatInputModule, MatBadgeModule],
+  imports: [MatIcon, MatBadgeModule],
   templateUrl: './header-middle.component.html',
   styleUrl: './header-middle.component.scss',
 })
-export class HeaderMiddleComponent implements OnChanges {
-  public logged = input<boolean>(false);
-  public showPopUpEvent = output<boolean>();
+export class HeaderMiddleComponent {
+  logged = input<boolean>(false);
+  showPopUpEvent = output<boolean>();
 
-  public isShowed: boolean = false;
-  public phone: string = 'tel:+380931437843';
-  public amountOfItems?: number;
-  public amountMoney?: number;
+  isShowed = false;
+  phone = 'tel:+380931437843';
 
-  ngOnChanges(changes: SimpleChanges): void {
-    if (this.logged()) {
-      this.amountOfItems = 5;
-      this.amountMoney = 450;
-    }
-  }
+  infoAboutUser = computed(() => {
+    if (this.logged())
+      return {
+        amountOfItems: 3,
+        amountOfMoney: 500,
+      };
+    return null;
+  });
 }

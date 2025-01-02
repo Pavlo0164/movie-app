@@ -1,0 +1,637 @@
+{
+  "products": [
+    {
+      "name": "MacBooks",
+      "products": [
+        {
+          "id": "macbook-air-m1",
+          "name": "MacBook Air (M1, 2020)",
+          "price": 999,
+          "description": "Thin and light MacBook Air with the M1 chip.",
+          "image": "macbook_air_m1.jpg",
+          "processor": "Apple M1",
+          "ram": 8,
+          "storage": 256,
+          "screen_size": 13.3
+        },
+        {
+          "id": "macbook-air-m2",
+          "name": "MacBook Air (M2, 2022)",
+          "price": 1199,
+          "description": "Redesigned MacBook Air with the M2 chip and MagSafe.",
+          "image": "macbook_air_m2.jpg",
+          "processor": "Apple M2",
+          "ram": 8,
+          "storage": 256,
+          "screen_size": 13.6
+        },
+        {
+          "id": "macbook-pro-13-m2",
+          "name": "13-inch MacBook Pro (M2, 2022)",
+          "price": 1299,
+          "description": "Powerful 13-inch MacBook Pro with the M2 chip.",
+          "image": "macbook_pro_13_m2.jpg",
+          "processor": "Apple M2",
+          "ram": 8,
+          "storage": 256,
+          "screen_size": 13.3
+        },
+        {
+          "id": "macbook-pro-14-m1pro",
+          "name": "14-inch MacBook Pro (M1 Pro, 2021)",
+          "price": 1999,
+          "description": "Professional 14-inch MacBook Pro with the M1 Pro chip.",
+          "image": "macbook_pro_14_m1pro.jpg",
+          "processor": "Apple M1 Pro",
+          "ram": 16,
+          "storage": 512,
+          "screen_size": 14.2
+        },
+        {
+          "id": "macbook-pro-16-m1max",
+          "name": "16-inch MacBook Pro (M1 Max, 2021)",
+          "price": 2499,
+          "description": "High-performance 16-inch MacBook Pro with the M1 Max chip.",
+          "image": "macbook_pro_16_m1max.jpg",
+          "processor": "Apple M1 Max",
+          "ram": 32,
+          "storage": 1000,
+          "screen_size": 16.2
+        },
+        {
+          "id": "macbook-pro-14-m2pro",
+          "name": "14-inch MacBook Pro (M2 Pro, 2023)",
+          "price": 1999,
+          "description": "Updated 14-inch MacBook Pro with the M2 Pro chip.",
+          "image": "macbook_pro_14_m2pro.jpg",
+          "processor": "Apple M2 Pro",
+          "ram": 16,
+          "storage": 512,
+          "screen_size": 14.2
+        },
+        {
+          "id": "macbook-pro-16-m2max",
+          "name": "16-inch MacBook Pro (M2 Max, 2023)",
+          "price": 3499,
+          "description": "Top-of-the-line 16-inch MacBook Pro with the M2 Max chip and more unified memory.",
+          "image": "macbook_pro_16_m2max.jpg",
+          "processor": "Apple M2 Max",
+          "ram": 64,
+          "storage": 2000,
+          "screen_size": 16.2
+        },
+        {
+          "id": "macbook-air-m1-512",
+          "name": "MacBook Air (M1, 2020, 512GB)",
+          "price": 1249,
+          "description": "Macbook Air M1 with 512GB of storage.",
+          "image": "macbook_air_m1.jpg",
+          "processor": "Apple M1",
+          "ram": 8,
+          "storage": 512,
+          "screen_size": 13.3
+        },
+        {
+          "id": "macbook-pro-13-m1",
+          "name": "13-inch MacBook Pro (M1, 2020)",
+          "price": 1299,
+          "description": "13-inch MacBook Pro with the M1 chip.",
+          "image": "macbook_pro_13_m1.jpg",
+          "processor": "Apple M1",
+          "ram": 8,
+          "storage": 256,
+          "screen_size": 13.3
+        },
+        {
+          "id": "macbook-air-m2-16",
+          "name": "MacBook Air (M2, 2022, 16GB)",
+          "price": 1499,
+          "description": "Macbook Air M2 with 16GB of unified memory.",
+          "image": "macbook_air_m2.jpg",
+          "processor": "Apple M2",
+          "ram": 16,
+          "storage": 256,
+          "screen_size": 13.6
+        }
+      ]
+    },
+    {
+      "name": "pc",
+      "products": [
+        {
+          "id": "imac-24-m1-blue",
+          "name": "24-inch iMac (M1, 2021, Blue)",
+          "price": 1299,
+          "description": "Stunning 24-inch iMac with the powerful M1 chip, in blue.",
+          "image": "imac_24_blue.jpg",
+          "processor": "Apple M1",
+          "ram": 8,
+          "storage": 256,
+          "screen_size": 24,
+          "color": "Blue"
+        },
+        {
+          "id": "imac-24-m1-green",
+          "name": "24-inch iMac (M1, 2021, Green)",
+          "price": 1299,
+          "description": "Stunning 24-inch iMac with the powerful M1 chip, in green.",
+          "image": "imac_24_green.jpg",
+          "processor": "Apple M1",
+          "ram": 8,
+          "storage": 256,
+          "screen_size": 24,
+          "color": "Green"
+        },
+        {
+          "id": "imac-24-m1-pink",
+          "name": "24-inch iMac (M1, 2021, Pink)",
+          "price": 1299,
+          "description": "Stunning 24-inch iMac with the powerful M1 chip, in pink.",
+          "image": "imac_24_pink.jpg",
+          "processor": "Apple M1",
+          "ram": 8,
+          "storage": 256,
+          "screen_size": 24,
+          "color": "Pink"
+        },
+        {
+          "id": "imac-24-m1-silver",
+          "name": "24-inch iMac (M1, 2021, Silver)",
+          "price": 1299,
+          "description": "Stunning 24-inch iMac with the powerful M1 chip, in silver.",
+          "image": "imac_24_silver.jpg",
+          "processor": "Apple M1",
+          "ram": 8,
+          "storage": 256,
+          "screen_size": 24,
+          "color": "Silver"
+        },
+        {
+          "id": "imac-24-m1-yellow",
+          "name": "24-inch iMac (M1, 2021, Yellow)",
+          "price": 1299,
+          "description": "Stunning 24-inch iMac with the powerful M1 chip, in yellow.",
+          "image": "imac_24_yellow.jpg",
+          "processor": "Apple M1",
+          "ram": 8,
+          "storage": 256,
+          "screen_size": 24,
+          "color": "Yellow"
+        },
+        {
+          "id": "imac-24-m1-orange",
+          "name": "24-inch iMac (M1, 2021, Orange)",
+          "price": 1299,
+          "description": "Stunning 24-inch iMac with the powerful M1 chip, in orange.",
+          "image": "imac_24_orange.jpg",
+          "processor": "Apple M1",
+          "ram": 8,
+          "storage": 256,
+          "screen_size": 24,
+          "color": "Orange"
+        },
+        {
+          "id": "imac-24-m1-16gb",
+          "name": "24-inch iMac (M1, 2021, 16GB RAM)",
+          "price": 1699,
+          "description": "Stunning 24-inch iMac with the powerful M1 chip and 16GB of unified memory.",
+          "image": "imac_24.jpg",
+          "processor": "Apple M1",
+          "ram": 16,
+          "storage": 256,
+          "screen_size": 24
+        },
+        {
+          "id": "imac-24-m1-512gb",
+          "name": "24-inch iMac (M1, 2021, 512GB Storage)",
+          "price": 1499,
+          "description": "Stunning 24-inch iMac with the powerful M1 chip and 512GB SSD.",
+          "image": "imac_24.jpg",
+          "processor": "Apple M1",
+          "ram": 8,
+          "storage": 512,
+          "screen_size": 24
+        },
+        {
+          "id": "mac-studio-m1-max",
+          "name": "Mac Studio (M1 Max, 2022)",
+          "price": 1999,
+          "description": "Incredibly powerful Mac Studio with the M1 Max chip for demanding workflows.",
+          "image": "mac_studio.jpg",
+          "processor": "Apple M1 Max",
+          "ram": 32,
+          "storage": 512
+        },
+        {
+          "id": "mac-studio-m1-ultra",
+          "name": "Mac Studio (M1 Ultra, 2022)",
+          "price": 3999,
+          "description": "The ultimate Mac Studio with the groundbreaking M1 Ultra chip for extreme performance.",
+          "image": "mac_studio_ultra.jpg",
+          "processor": "Apple M1 Ultra",
+          "ram": 64,
+          "storage": 1000
+        },
+        {
+          "id": "mac-studio-m1-max-64",
+          "name": "Mac Studio (M1 Max, 2022, 64GB RAM)",
+          "price": 2799,
+          "description": "Mac Studio with M1 Max and 64GB of unified memory.",
+          "image": "mac_studio.jpg",
+          "processor": "Apple M1 Max",
+          "ram": 64,
+          "storage": 512
+        },
+        {
+          "id": "mac-studio-m1-ultra-2tb",
+          "name": "Mac Studio (M1 Ultra, 2022, 2TB Storage)",
+          "price": 4799,
+          "description": "The ultimate Mac Studio with M1 Ultra and 2TB SSD.",
+          "image": "mac_studio_ultra.jpg",
+          "processor": "Apple M1 Ultra",
+          "ram": 64,
+          "storage": 2000
+        }
+      ]
+    },
+    {
+      "name": "phones",
+      "products": [
+        {
+          "id": "iphone-14-pro-max-128",
+          "name": "iPhone 14 Pro Max (128GB)",
+          "price": 1099,
+          "description": "The ultimate iPhone experience with the A16 Bionic chip and Dynamic Island.",
+          "image": "iphone_14_pro_max.jpg",
+          "storage": 128,
+          "screen_size": 6.7,
+          "camera": "48MP Main",
+          "processor": "A16 Bionic",
+          "color": "Deep Purple"
+        },
+        {
+          "id": "iphone-14-pro-256",
+          "name": "iPhone 14 Pro (256GB)",
+          "price": 1099,
+          "description": "Pro performance and innovation with the A16 Bionic chip.",
+          "image": "iphone_14_pro.jpg",
+          "storage": 256,
+          "screen_size": 6.1,
+          "camera": "48MP Main",
+          "processor": "A16 Bionic",
+          "color": "Space Black"
+        },
+        {
+          "id": "iphone-14-128",
+          "name": "iPhone 14 (128GB)",
+          "price": 799,
+          "description": "A super powerful iPhone. A dramatically more capable camera.",
+          "image": "iphone_14.jpg",
+          "storage": 128,
+          "screen_size": 6.1,
+          "camera": "12MP Main",
+          "processor": "A15 Bionic",
+          "color": "Midnight"
+        },
+        {
+          "id": "iphone-14-plus-256",
+          "name": "iPhone 14 Plus (256GB)",
+          "price": 999,
+          "description": "Go big. iPhone 14 Plus with a larger display.",
+          "image": "iphone_14_plus.jpg",
+          "storage": 256,
+          "screen_size": 6.7,
+          "camera": "12MP Main",
+          "processor": "A15 Bionic",
+          "color": "Starlight"
+        },
+        {
+          "id": "iphone-se-64",
+          "name": "iPhone SE (64GB, 3rd generation)",
+          "price": 429,
+          "description": "Powerful. For less. The most affordable iPhone.",
+          "image": "iphone_se.jpg",
+          "storage": 64,
+          "screen_size": 4.7,
+          "camera": "12MP Main",
+          "processor": "A15 Bionic",
+          "color": "Midnight"
+        },
+        {
+          "id": "iphone-14-pro-max-512",
+          "name": "iPhone 14 Pro Max (512GB)",
+          "price": 1399,
+          "description": "The ultimate iPhone experience with even more storage.",
+          "image": "iphone_14_pro_max.jpg",
+          "storage": 512,
+          "screen_size": 6.7,
+          "camera": "48MP Main",
+          "processor": "A16 Bionic",
+          "color": "Gold"
+        },
+        {
+          "id": "iphone-13-128",
+          "name": "iPhone 13 (128GB)",
+          "price": 699,
+          "description": "Super Retina XDR display. A15 Bionic chip. An advanced dual-camera system.",
+          "image": "iphone_13.jpg",
+          "storage": 128,
+          "screen_size": 6.1,
+          "camera": "12MP dual-camera system",
+          "processor": "A15 Bionic",
+          "color": "Pink"
+        },
+        {
+          "id": "iphone-13-mini-256",
+          "name": "iPhone 13 mini (256GB)",
+          "price": 699,
+          "description": "The smallest iPhone with a big impact.",
+          "image": "iphone_13_mini.jpg",
+          "storage": 256,
+          "screen_size": 5.4,
+          "camera": "12MP dual-camera system",
+          "processor": "A15 Bionic",
+          "color": "Blue"
+        },
+        {
+          "id": "iphone-14-256",
+          "name": "iPhone 14 (256GB)",
+          "price": 899,
+          "description": "A super powerful iPhone. Now with even more storage.",
+          "image": "iphone_14.jpg",
+          "storage": 256,
+          "screen_size": 6.1,
+          "camera": "12MP Main",
+          "processor": "A15 Bionic",
+          "color": "Purple"
+        },
+        {
+          "id": "iphone-14-pro-1tb",
+          "name": "iPhone 14 Pro (1TB)",
+          "price": 1499,
+          "description": "For those who need maximum storage in their iPhone.",
+          "image": "iphone_14_pro.jpg",
+          "storage": 1000,
+          "screen_size": 6.1,
+          "camera": "48MP Main",
+          "processor": "A16 Bionic",
+          "color": "Silver"
+        }
+      ]
+    },
+    {
+      "name": "pods",
+      "products": [
+        {
+          "id": "airpods-2",
+          "name": "AirPods (2nd generation)",
+          "price": 129,
+          "description": "Wireless earbuds with rich, high-quality audio and voice-activated Siri.",
+          "image": "airpods_2.jpg",
+          "type": "In-ear",
+          "connectivity": "Bluetooth",
+          "charging_case": "Wired",
+          "microphone": "Dual beamforming microphones"
+        },
+        {
+          "id": "airpods-3",
+          "name": "AirPods (3rd generation)",
+          "price": 169,
+          "description": "Spatial audio with dynamic head tracking. Adaptive EQ. Sweat and water resistant.",
+          "image": "airpods_3.jpg",
+          "type": "In-ear",
+          "connectivity": "Bluetooth",
+          "charging_case": "MagSafe",
+          "microphone": "Dual beamforming microphones"
+        },
+        {
+          "id": "airpods-pro-2",
+          "name": "AirPods Pro (2nd generation)",
+          "price": 249,
+          "description": "Upgraded AirPods Pro with up to 2x more Active Noise Cancellation and Adaptive Transparency.",
+          "image": "airpods_pro_2.jpg",
+          "type": "In-ear",
+          "connectivity": "Bluetooth",
+          "charging_case": "MagSafe with speaker and lanyard loop",
+          "microphone": "Dual beamforming microphones"
+        },
+        {
+          "id": "airpods-max",
+          "name": "AirPods Max",
+          "price": 549,
+          "description": "Over-ear headphones with high-fidelity audio, Active Noise Cancellation, and spatial audio.",
+          "image": "airpods_max.jpg",
+          "type": "Over-ear",
+          "connectivity": "Bluetooth",
+          "charging_case": "Smart Case",
+          "microphone": "Nine microphones total"
+        },
+        {
+          "id": "airpods-3-lightning",
+          "name": "AirPods (3rd generation) with Lightning Charging Case",
+          "price": 169,
+          "description": "Spatial audio with dynamic head tracking. Adaptive EQ. Sweat and water resistant. Lightning Charging Case.",
+          "image": "airpods_3_lightning.jpg",
+          "type": "In-ear",
+          "connectivity": "Bluetooth",
+          "charging_case": "Lightning",
+          "microphone": "Dual beamforming microphones"
+        },
+        {
+          "id": "airpods-2-wireless",
+          "name": "AirPods (2nd generation) with Wireless Charging Case",
+          "price": 199,
+          "description": "Wireless earbuds with rich, high-quality audio and voice-activated Siri. Wireless Charging Case.",
+          "image": "airpods_2_wireless.jpg",
+          "type": "In-ear",
+          "connectivity": "Bluetooth",
+          "charging_case": "Wireless",
+          "microphone": "Dual beamforming microphones"
+        },
+        {
+          "id": "airpods-max-space-gray",
+          "name": "AirPods Max - Space Gray",
+          "price": 549,
+          "description": "Over-ear headphones with high-fidelity audio, Active Noise Cancellation, and spatial audio. Space Gray color.",
+          "image": "airpods_max_space_gray.jpg",
+          "type": "Over-ear",
+          "connectivity": "Bluetooth",
+          "charging_case": "Smart Case",
+          "microphone": "Nine microphones total",
+          "color": "Space Gray"
+        },
+        {
+          "id": "airpods-max-silver",
+          "name": "AirPods Max - Silver",
+          "price": 549,
+          "description": "Over-ear headphones with high-fidelity audio, Active Noise Cancellation, and spatial audio. Silver color.",
+          "image": "airpods_max_silver.jpg",
+          "type": "Over-ear",
+          "connectivity": "Bluetooth",
+          "charging_case": "Smart Case",
+          "microphone": "Nine microphones total",
+          "color": "Silver"
+        },
+        {
+          "id": "airpods-max-sky-blue",
+          "name": "AirPods Max - Sky Blue",
+          "price": 549,
+          "description": "Over-ear headphones with high-fidelity audio, Active Noise Cancellation, and spatial audio. Sky Blue color.",
+          "image": "airpods_max_sky_blue.jpg",
+          "type": "Over-ear",
+          "connectivity": "Bluetooth",
+          "charging_case": "Smart Case",
+          "microphone": "Nine microphones total",
+          "color": "Sky Blue"
+        },
+        {
+          "id": "airpods-max-pink",
+          "name": "AirPods Max - Pink",
+          "price": 549,
+          "description": "Over-ear headphones with high-fidelity audio, Active Noise Cancellation, and spatial audio. Pink color.",
+          "image": "airpods_max_pink.jpg",
+          "type": "Over-ear",
+          "connectivity": "Bluetooth",
+          "charging_case": "Smart Case",
+          "microphone": "Nine microphones total",
+          "color": "Pink"
+        }
+      ]
+    },
+    {
+      "name": "watches",
+      "products": [
+        {
+          "id": "apple-watch-ultra",
+          "name": "Apple Watch Ultra",
+          "price": 799,
+          "description": "The most rugged and capable Apple Watch. Designed for outdoor adventure.",
+          "image": "apple_watch_ultra.jpg",
+          "case_size": "49mm",
+          "case_material": "Titanium",
+          "features": ["GPS + Cellular", "Action button", "Depth Gauge"],
+          "display": "Always-On Retina display"
+        },
+        {
+          "id": "apple-watch-series-8-41mm",
+          "name": "Apple Watch Series 8 (41mm)",
+          "price": 399,
+          "description": "Advanced health sensors and features, including blood oxygen and ECG.",
+          "image": "apple_watch_series_8_41mm.jpg",
+          "case_size": "41mm",
+          "case_material": "Aluminum",
+          "features": ["GPS", "Blood Oxygen app", "ECG app"],
+          "display": "Always-On Retina display"
+        },
+        {
+          "id": "apple-watch-series-8-45mm",
+          "name": "Apple Watch Series 8 (45mm)",
+          "price": 429,
+          "description": "Larger display and all the advanced health features of Series 8.",
+          "image": "apple_watch_series_8_45mm.jpg",
+          "case_size": "45mm",
+          "case_material": "Aluminum",
+          "features": ["GPS + Cellular", "Blood Oxygen app", "ECG app"],
+          "display": "Always-On Retina display"
+        },
+        {
+          "id": "apple-watch-se-40mm",
+          "name": "Apple Watch SE (40mm)",
+          "price": 249,
+          "description": "Essential Apple Watch features at a great value.",
+          "image": "apple_watch_se_40mm.jpg",
+          "case_size": "40mm",
+          "case_material": "Aluminum",
+          "features": ["GPS", "Fall Detection", "Emergency SOS"],
+          "display": "Retina display"
+        },
+        {
+          "id": "apple-watch-se-44mm",
+          "name": "Apple Watch SE (44mm)",
+          "price": 279,
+          "description": "Larger display and all the essential features of SE.",
+          "image": "apple_watch_se_44mm.jpg",
+          "case_size": "44mm",
+          "case_material": "Aluminum",
+          "features": ["GPS + Cellular", "Fall Detection", "Emergency SOS"],
+          "display": "Retina display"
+        },
+        {
+          "id": "apple-watch-series-8-41mm-stainless",
+          "name": "Apple Watch Series 8 (41mm, Stainless Steel)",
+          "price": 699,
+          "description": "Premium design with a stainless steel case and advanced health features.",
+          "image": "apple_watch_series_8_41mm_stainless.jpg",
+          "case_size": "41mm",
+          "case_material": "Stainless Steel",
+          "features": [
+            "GPS + Cellular",
+            "Blood Oxygen app",
+            "ECG app",
+            "Sapphire crystal"
+          ],
+          "display": "Always-On Retina display"
+        },
+        {
+          "id": "apple-watch-series-8-45mm-nike",
+          "name": "Apple Watch Series 8 (45mm, Nike Edition)",
+          "price": 429,
+          "description": "Designed for athletes with exclusive Nike Sport Band and Nike Run Club app.",
+          "image": "apple_watch_series_8_45mm_nike.jpg",
+          "case_size": "45mm",
+          "case_material": "Aluminum",
+          "features": [
+            "GPS",
+            "Blood Oxygen app",
+            "ECG app",
+            "Nike Run Club app"
+          ],
+          "display": "Always-On Retina display"
+        },
+        {
+          "id": "apple-watch-ultra-ocean-band",
+          "name": "Apple Watch Ultra with Ocean Band",
+          "price": 799,
+          "description": "The most rugged and capable Apple Watch. Designed for water sports.",
+          "image": "apple_watch_ultra_ocean_band.jpg",
+          "case_size": "49mm",
+          "case_material": "Titanium",
+          "features": [
+            "GPS + Cellular",
+            "Action button",
+            "Depth Gauge",
+            "Ocean Band"
+          ],
+          "display": "Always-On Retina display"
+        },
+        {
+          "id": "apple-watch-se-40mm-cellular",
+          "name": "Apple Watch SE (40mm, Cellular)",
+          "price": 299,
+          "description": "Essential Apple Watch features with cellular connectivity.",
+          "image": "apple_watch_se_40mm_cellular.jpg",
+          "case_size": "40mm",
+          "case_material": "Aluminum",
+          "features": ["GPS + Cellular", "Fall Detection", "Emergency SOS"],
+          "display": "Retina display"
+        },
+        {
+          "id": "apple-watch-series-8-45mm-gold-stainless",
+          "name": "Apple Watch Series 8 (45mm, Gold Stainless Steel)",
+          "price": 749,
+          "description": "Premium design with a gold stainless steel case and advanced health features.",
+          "image": "apple_watch_series_8_45mm_gold_stainless.jpg",
+          "case_size": "45mm",
+          "case_material": "Gold Stainless Steel",
+          "features": [
+            "GPS + Cellular",
+            "Blood Oxygen app",
+            "ECG app",
+            "Sapphire crystal"
+          ],
+          "display": "Always-On Retina display"
+        }
+      ]
+    }
+  ]
+}

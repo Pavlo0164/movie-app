@@ -5,7 +5,7 @@
       <span
         [class]="!logged ? 'hidden' : null"
         class="header__badge-icon-favorite"
-        >{{ productsInFavor }}</span
+        >{{ informationOfUser()?.productsInFavor }}</span
       >
     </div>
     <button *ngIf="!logged; else loggedUser" class="header__button-user">
@@ -15,7 +15,7 @@
     <ng-template #loggedUser>
       <button [matMenuTriggerFor]="menu" class="header__button-user">
         <mat-icon class="header__icon-user" fontIcon="person"></mat-icon>
-        <p class="header__user-name">{{ nameOfUser }}</p>
+        <p class="header__user-name">{{ informationOfUser()?.nameOfUser }}</p>
         <mat-icon
           class="header__icon-user"
           fontIcon="keyboard_arrow_down"
