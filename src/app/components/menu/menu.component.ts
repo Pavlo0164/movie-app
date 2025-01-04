@@ -1,17 +1,18 @@
-
 import { NgFor } from '@angular/common';
-import { Component, HostBinding, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-menu',
   imports: [NgFor],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss',
+  host: {
+    class: 'menu',
+  },
 })
 export class MenuComponent implements OnInit {
-  @HostBinding('class.menu')
-  public addClass: boolean = true;
-  public menuItems?: string[];
+  menuItems: string[] = [];
+  constructor() {}
   ngOnInit(): void {
     this.menuItems = [
       'electronics',
@@ -20,4 +21,5 @@ export class MenuComponent implements OnInit {
       "women's clothing",
     ];
   }
+  
 }

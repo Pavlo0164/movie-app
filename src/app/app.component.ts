@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { HeaderComponent } from './components/header/header.component';
 import { HeaderMiddleComponent } from './components/header-middle/header-middle.component';
 import { PopupCallComponent } from './components/popup-call/popup-call.component';
 import { NgIf } from '@angular/common';
 import { MenuComponent } from './components/menu/menu.component';
+
 
 @Component({
   selector: 'app-root',
@@ -21,9 +22,10 @@ import { MenuComponent } from './components/menu/menu.component';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  public isLogged: boolean = true;
-  public isShowCallBack: boolean = false;
-  eventShowPopUp(isShow: boolean): void {
-    this.isShowCallBack = isShow;
-  }
+  isLogged: boolean = true;
+  
+  isShowCallBack = signal(false)
+  // eventShowPopUp(isShow: boolean): void {
+  //   this.isShowCallBack = isShow;
+  // }
 }

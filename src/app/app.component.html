@@ -1,12 +1,9 @@
 <div class="header">
   <app-header [logged]="isLogged"> </app-header>
   <app-header-middle
-    (showPopUpEvent)="eventShowPopUp($event)"
+    [(eventPopUp)]="isShowCallBack"
     [logged]="isLogged"
   ></app-header-middle>
 </div>
 <app-menu></app-menu>
-<app-popup-call
-  (closePopUpCallMe)="eventShowPopUp($event)"
-  *ngIf="isShowCallBack"
-></app-popup-call>
+<app-popup-call [(eventPopUp)]="isShowCallBack" *ngIf="isShowCallBack()"></app-popup-call>

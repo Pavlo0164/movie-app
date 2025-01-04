@@ -12,7 +12,7 @@
     <input type="tel" name="phone" />
   </label>
   <button class="pop-up__send" type="button">Send</button>
-  <span class="pop-up_exit">
-    <mat-icon (click)="closePopUpCallMe.emit(false)">close</mat-icon>
+  <span class="pop-up__exit">
+    <mat-icon class="pop-up__button" (click)="closePopUp($event)">close</mat-icon>
   </span>
 </form>

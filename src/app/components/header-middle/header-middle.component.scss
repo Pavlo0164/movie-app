@@ -53,6 +53,9 @@
     box-shadow: 0 0 0.3rem #999;
     background-color: #fff;
   }
+  &:hover &__link {
+    visibility: visible;
+  }
   &__row {
     display: flex;
     align-items: center;
@@ -61,9 +64,8 @@
   &__icon {
   }
   &__link {
-    &.hidden {
-      visibility: hidden;
-    }
+    visibility: hidden;
+
     color: rgb(0, 128, 255);
   }
   &__phone {

@@ -7,20 +7,12 @@
     <form action="#" name="searchProduct" class="header__search">
       <input class="header__input" matInput placeholder="Search product" />
     </form>
-    <div
-      (mouseleave)="isShowed = false"
-      (mouseenter)="isShowed = true"
-      class="header__phone-group phone-group"
-    >
+    <div class="header__phone-group phone-group">
       <div class="phone-group__row">
         <mat-icon class="phone-group__icon">call</mat-icon>
         <a [href]="phone" class="phone-group__phone">{{ phone }}</a>
       </div>
-      <button
-        (click)="showPopUpEvent.emit(true)"
-        [class]="!isShowed ? 'hidden' : null"
-        class="phone-group__link"
-      >
+      <button (click)="changeShowPopUp(true)" class="phone-group__link">
         Call to you?
       </button>
     </div>

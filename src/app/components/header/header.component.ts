@@ -2,6 +2,7 @@ import { NgIf } from '@angular/common';
 import { Component, computed, input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+
 @Component({
   selector: 'app-header',
   imports: [MatIconModule, NgIf, MatMenuModule],
@@ -10,7 +11,7 @@ import { MatMenuModule } from '@angular/material/menu';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  logged = input<boolean>(false);
+  logged = input.required<boolean>();
   informationOfUser = computed(() => {
     if (this.logged())
       return {

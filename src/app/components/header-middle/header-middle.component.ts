@@ -1,4 +1,4 @@
-import { Component, computed } from '@angular/core';
+import { Component, computed, model } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
 import { output, input } from '@angular/core';
@@ -10,12 +10,13 @@ import { output, input } from '@angular/core';
   styleUrl: './header-middle.component.scss',
 })
 export class HeaderMiddleComponent {
-  logged = input<boolean>(false);
-  showPopUpEvent = output<boolean>();
+  logged = input.required<boolean>();
+  eventPopUp = model<boolean>();
 
-  isShowed = false;
+  changeShowPopUp(value: boolean) {
+    this.eventPopUp.set(value);
+  }
   phone = 'tel:+380931437843';
-
   infoAboutUser = computed(() => {
     if (this.logged())
       return {

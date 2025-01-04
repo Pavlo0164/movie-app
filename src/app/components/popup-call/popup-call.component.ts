@@ -1,6 +1,5 @@
-import { Component, HostListener, output } from '@angular/core';
+import { Component, HostListener, model } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
-
 @Component({
   selector: 'app-popup-call',
   imports: [MatIcon],
@@ -11,13 +10,15 @@ import { MatIcon } from '@angular/material/icon';
   },
 })
 export class PopupCallComponent {
-  closePopUpCallMe = output<boolean>();
+  eventPopUp = model<boolean>();
   @HostListener('body:click', ['$event'])
   closePopUp(event: MouseEvent) {
-    if (
-      event.target &&
-      (event.target as HTMLElement).classList.contains('pop-up')
-    )
-      this.closePopUpCallMe.emit(false);
+    if ((event.target as HTMLElement).classList.contains('pop-up'))
+      this.eventPopUp.set(false);
+    else if (
+      (event.target as HTMLElement).classList.contains('pop-up__button')
+    ) {
+      this.eventPopUp.set(false);
+    }
   }
 }
